@@ -65,7 +65,15 @@ public class Calculator {
 					result = (result / second);
 					strResult = strResult + " / " + second;
 				}
-			} else {
+			}  else if (symbol.equals("%")) {
+			    if (chkVal == 0) {
+			        result = (first % second);
+			        strResult = first + " % " + second;
+			    } else {
+			        result = (result % second);
+			        strResult = strResult + " % " + second;
+			    }
+			else {
 				System.out.println("사칙연산 기호가 아닙니다.");
 			}
 			
